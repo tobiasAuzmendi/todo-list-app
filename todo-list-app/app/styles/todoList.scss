@@ -1,0 +1,30 @@
+#todo-list {
+  .add-item-container {
+    width: 100%;
+    .new-task-text {
+      width: 60%;
+      border-radius: 5px;
+    }
+    .add-task-button {
+      width: 20%;
+      transform: translateY(-40%);
+    }
+  }
+  .action-button {
+    width: 20%;
+  }
+  .tasks-container {
+  	margin-top: 10px;
+    li {
+      padding: 10px 0;
+    }
+  }
+  .done {
+    text-decoration: line-through;
+  }
+  .remove-task-button {
+    padding: 1px 6px;
+    margin-left: 10px;
+    border-radius: 3px;
+  }
+}

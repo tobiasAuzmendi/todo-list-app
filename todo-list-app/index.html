@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="app/styles/styles.css">
+  <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+  <link rel="stylesheet" href="bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+  <title>To do list</title>
+</head>
+
+<body ng-app="todoListApp">
+  <ng-view> </ng-view>
+</body>
+<!-- bower_components -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+<!-- /bower_components -->
+<!-- scripts -->
+<script src="app/scripts/app.js"></script>
+<script src="app/scripts/routes/app.routes.js"></script>
+<script src="app/scripts/controllers/userSelection.controller.js"></script>
+<script src="app/scripts/controllers/todoList.controller.js"></script>
+<script src="app/scripts/directives/perfectScrollbar.directive.js"></script>
+<script src="app/scripts/services/tasks.factory.js"></script>
+<script src="app/scripts/services/users.factory.js"></script>
+<script src="app/scripts/filters/tasks.filter.js"></script>
+<script src="app/scripts/constants/urls.constant.js"></script>
+<!-- /scripts -->
+
+</html>

@@ -1,0 +1,26 @@
+@import "colors.scss";
+
+body {
+  background-color: $grey;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+button {
+  background-color: $blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  margin: 5px 0px;
+  outline: none;  
+  &:hover {
+    cursor: pointer;
+  }
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}	

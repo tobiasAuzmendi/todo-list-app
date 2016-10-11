@@ -1,0 +1,19 @@
+<div id="todo-list">
+  <h4><span ng-bind="vm.userName"></span> total tasks: {{ vm.tasks.length }}</h4>
+  <div class="add-item-container">
+    <textarea type="text" class="new-task-text" placeholder="New task ..." ng-model="vm.newTask.title">
+    </textarea>
+    <button class="add-task-button" ng-click="vm.addTask(vm.newTask)" ng-disabled="vm.newTask.title == ''">Add</button>
+  </div>
+  <div class="show-actions">
+    <button class="action-button" ng-click="vm.action = 'showPending'">Pending</button>
+    <button class="action-button" ng-click="vm.action = 'showDone'">Done</button>
+    <button class="action-button" ng-click="vm.action = 'showAll'">All</button>
+  </div>
+  <div class="tasks-container">
+    <li ng-repeat="task in vm.tasks | TasksFilter:vm.action track by $index" class="animated bounceInUp" ng-class="{ 'done' : task.completed }">
+      <input type="checkbox" ng-model="task.completed"> {{ task.title }}
+      <button class="remove-task-button" ng-click="vm.removeTask($index)">x</button>
+    </li>
+  </div>
+</div>

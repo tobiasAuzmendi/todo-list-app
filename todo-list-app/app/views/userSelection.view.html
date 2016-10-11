@@ -1,0 +1,9 @@
+<div id="user-selection">
+  <h3> Select user </h3>
+  <div class="users-container">
+    <li class="list-item" ng-class="user.id === vm.selectedUser.id ? 'selected' : ''" ng-repeat="user in vm.users" perfect-scrollbar array="vm.users" container="users-container">
+      <a ng-click="vm.selectUser(user)">{{user.name}}</a>
+    </li>
+  </div>
+  <button type="button" ng-click="vm.showTasks()" ng-disabled="vm.selectedUser == ''">Show tasks</button>
+</div>

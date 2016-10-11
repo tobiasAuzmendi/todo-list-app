@@ -1,0 +1,67 @@
+body {
+  background-color: #F1F1F1;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 400; }
+
+button {
+  background-color: #0077CC;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  margin: 5px 0px;
+  outline: none;
+  overflow: hidden; }
+  button:hover {
+    cursor: pointer; }
+
+li {
+  list-style: none; }
+
+#user-selection {
+  text-align: center; }
+  #user-selection h3 {
+    color: #0077CC; }
+  #user-selection .users-container {
+    position: relative;
+    height: 250px;
+    border-radius: 5px;
+    padding-right: 10px;
+    background: #fff; }
+    #user-selection .users-container:hover {
+      cursor: pointer; }
+    #user-selection .users-container .list-item {
+      margin: 10px 0;
+      padding: 5px 0;
+      width: 100%; }
+      #user-selection .users-container .list-item:hover {
+        background: #0077CC;
+        color: #fff;
+        font-weight: bold; }
+    #user-selection .users-container .selected {
+      background-color: #0077CC;
+      color: #fff; }
+
+#todo-list .add-item-container {
+  width: 100%; }
+  #todo-list .add-item-container .new-task-text {
+    width: 60%;
+    border-radius: 5px; }
+  #todo-list .add-item-container .add-task-button {
+    width: 20%;
+    transform: translateY(-40%); }
+#todo-list .action-button {
+  width: 20%; }
+#todo-list .tasks-container {
+  margin-top: 10px; }
+  #todo-list .tasks-container li {
+    padding: 10px 0; }
+#todo-list .done {
+  text-decoration: line-through; }
+#todo-list .remove-task-button {
+  padding: 1px 6px;
+  margin-left: 10px;
+  border-radius: 3px; }
+
+/*# sourceMappingURL=styles.css.map */

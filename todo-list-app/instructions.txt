@@ -1,0 +1,12 @@
+App runing instructions:
+
+1. Download and install xampp.
+2. Put the folder project (todo-list-app) in the htdocs directory.
+3. Star apache in xampp.
+4. Run http://localhost/todo-list-app/ in the browser.
+
+Tests running instructions:
+ 
+1. Install karma with npm (npm install karma-cli phantomjs -g).
+2. Install jasmine (npm install karma jasmine --save-dev).
+3. run karma start karma.conf.js on the test folder.
