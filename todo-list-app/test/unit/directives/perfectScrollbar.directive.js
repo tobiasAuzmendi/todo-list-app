@@ -10,7 +10,7 @@ describe('perfect scrollbar directive test', function() {
     });
   });
 
-  it('should call the given method on an on-enter-event', function() {
+  it('should call the Ps methods', function() {
     spyOn(Ps, 'initialize');
     spyOn(Ps, 'destroy');
 
@@ -30,5 +30,5 @@ describe('perfect scrollbar directive test', function() {
       suppressScrollX: true
     });
   });
-  
+
 });

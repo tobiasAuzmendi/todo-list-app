@@ -1,4 +1,4 @@
-describe('userSection controller test', function() {
+describe('userSelection controller test', function() {
   var $controller,
     controller,
     UsersFactory,
