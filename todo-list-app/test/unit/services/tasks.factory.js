@@ -1,4 +1,4 @@
-describe('servicesChecker controller test', function() {
+describe('tasks factory controller test', function() {
   var TasksFactory,
   $http;
 

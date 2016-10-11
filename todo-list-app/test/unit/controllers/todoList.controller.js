@@ -1,4 +1,4 @@
-describe('servicesChecker controller test', function() {
+describe('todoList controller test', function() {
   var $controller,
     controller,
     UsersFactory,
