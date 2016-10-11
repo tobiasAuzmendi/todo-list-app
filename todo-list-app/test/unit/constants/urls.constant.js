@@ -1,4 +1,4 @@
-describe('urls constant controller test', function() {
+describe('urls constant test', function() {
   var endpoint;
 
   //adding app module to test

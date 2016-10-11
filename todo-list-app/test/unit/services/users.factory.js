@@ -1,4 +1,4 @@
-describe('users factory controller test', function() {
+describe('users factory test', function() {
   var TasksFactory,
     $cookies;
 
