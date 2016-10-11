@@ -1,21 +1,41 @@
 describe('users factory test', function() {
-  var TasksFactory,
-    $cookies;
+  var TasksFactory;
 
   //adding app module to test
   beforeEach(module('todoListApp'));
 
-  beforeEach(inject(function(_UsersFactory_, _$cookies_) {
+  beforeEach(inject(function(_UsersFactory_) {
     UsersFactory = _UsersFactory_;
-    $cookies = _$cookies_;
   }));
 
   describe('functions', function() {
     it('getUsers', function() {
+      var $http;
+      var endpoint;
+      inject(function(_$http_, ENDPOINT) {
+        $http = _$http_;
+        endpoint = ENDPOINT;
+      });
+
       expect(angular.isFunction(UsersFactory.getUsers)).toBeTruthy();
+      spyOn($http, 'get').and.returnValue({
+        then: function() {
+          return {
+            catch: function() {}
+          }
+        }
+      });
+
+      UsersFactory.getUsers();
+      expect($http.get).toHaveBeenCalled();
+      expect($http.get).toHaveBeenCalledWith(endpoint + 'users');
     });
 
     it('setCurrentUser', function() {
+      var $cookies;
+      inject(function(_$cookies_) {
+        $cookies = _$cookies_;
+      });
       expect(angular.isFunction(UsersFactory.setCurrentUser)).toBeTruthy();
 
       UsersFactory.setCurrentUser({ name: 'an userName' });

@@ -1,22 +1,33 @@
 describe('tasks factory test', function() {
-  var TasksFactory,
-  $http;
-
-  //adding app module to test
+  var TasksFactory
+    //adding app module to test
   beforeEach(module('todoListApp'));
 
-  beforeEach(inject(function(_TasksFactory_, _$http_) {
+  beforeEach(inject(function(_TasksFactory_) {
     TasksFactory = _TasksFactory_;
-    $http=_$http_;
   }));
 
   describe('functions', function() {
     it('getUserTasks', function() {
-      spyOn($http,'get').and.returnValue( { then: function() { return { catch: function(){} } } });
-      expect(angular.isFunction(TasksFactory.getUserTasks)).toBeTruthy();
+      var $http;
+      var endpoint;
+      inject(function(_$http_, ENDPOINT) {
+        $http = _$http_;
+        endpoint = ENDPOINT;
+      });
 
-      TasksFactory.getUserTasks();
+      expect(angular.isFunction(TasksFactory.getUserTasks)).toBeTruthy();
+      spyOn($http, 'get').and.returnValue({
+        then: function() {
+          return {
+            catch: function() {}
+          }
+        }
+      });
+
+      TasksFactory.getUserTasks(5);
       expect($http.get).toHaveBeenCalled();
+      expect($http.get).toHaveBeenCalledWith(endpoint + 'todos?userId=5');
     });
 
     it('getNewTask', function() {
